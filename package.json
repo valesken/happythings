@@ -1,0 +1,28 @@
+{
+  "name": "happythings",
+  "version": "1.0.0",
+  "description": "HappyThings react app",
+  "main": "app.js",
+  "author": "Jeff Kennedy",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "browserify": "^13.0.0",
+    "express": "^4.12.4",
+    "node-jsx": "^0.13.3",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-tap-event-plugin": "^1.0.0",
+    "reactify": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.11.1",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-react": "^3.1.0",
+    "gulp-watch": "^4.3.9",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
