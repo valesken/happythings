@@ -21,7 +21,7 @@ gulp.task('client-scripts', ['jsx'], function() {
 // Watch for changes to .jsx file
 gulp.task('watch-jsx', ['client-scripts'], function() {
     gulpWatch(['app/**/*.jsx', 'app/**/*.js'], function() {
-        gulp.start('jsx');
+        gulp.start('client-scripts');
     });
 });
 

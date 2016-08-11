@@ -11,7 +11,7 @@ module.exports = React.createClass({
         return (
             <html>
                 <head>
-                    <title>Hello World</title>
+                    <title>happythings</title>
                     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' type='text/css' />
                     <script src="/assets/js/index.js"></script>
                 </head>

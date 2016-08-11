@@ -1,6 +1,4 @@
 var React = require('react');
-var MuiThemeProvider = require('material-ui/styles').MuiThemeProvider;
-var getMuiTheme = require('material-ui/styles').getMuiTheme;
 var RaisedButton = require('material-ui').RaisedButton;
 var injectTapEventPlugin = require('react-tap-event-plugin');
 
@@ -14,7 +12,6 @@ module.exports = React.createClass({
 
     getInitialState: function() {
         return { 
-            theme: this.props.theme || {},
             id: this.props.id,
             label: this.props.label,
             primary: this.props.primary || false,
@@ -27,16 +24,14 @@ module.exports = React.createClass({
 
     render: function() {
         return (
-            <MuiThemeProvider muiTheme={getMuiTheme(this.state.theme)}>
-                <RaisedButton 
-                    id={this.state.id} 
-                    label={this.state.label} 
-                    primary={this.state.primary} 
-                    secondary={this.state.secondary} 
-                    disabled={this.state.disabled} 
-                    onTouchTap={this.handleClick}
-                    style={this.state.style} />
-            </MuiThemeProvider>
+            <RaisedButton 
+                id={this.state.id} 
+                label={this.state.label} 
+                primary={this.state.primary} 
+                secondary={this.state.secondary} 
+                disabled={this.state.disabled} 
+                onTouchTap={this.handleClick}
+                style={this.state.style} />
         );
     }
 });
