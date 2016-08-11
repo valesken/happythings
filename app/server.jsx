@@ -2,7 +2,6 @@ var React = require('react');
 var ReactDOMServer = require('react-dom/server');
 var express = require('express');
 var path = require('path');
-var HelloWorld = require('./components/HelloWorld');
 var Layout = require('./assets/pages/Layout');
 
 var app = express();
@@ -15,19 +14,8 @@ app.use(
 
 // Index
 app.get('/', function(req, res) {
-
     res.setHeader('Content-Type', 'text/html');
-
-    var content = ReactDOMServer.renderToString(
-        <HelloWorld from="server.jsx, running on the server" />
-    );
-
-    var html = ReactDOMServer.renderToStaticMarkup(
-        <Layout content={content} />
-    );
-
-    res.end(html);
-
+    res.end(ReactDOMServer.renderToStaticMarkup(<Layout />));
 });
 
 var server = app.listen(3333, function() {

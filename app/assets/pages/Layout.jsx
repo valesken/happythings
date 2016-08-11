@@ -3,6 +3,7 @@ var MUI = require('material-ui');
 
 var bodyStyle = {
     fontFamily: "'Roboto', sans-serif",
+    textAlign: "center"
 };
 
 module.exports = React.createClass({
@@ -15,9 +16,7 @@ module.exports = React.createClass({
                     <script src="/assets/js/index.js"></script>
                 </head>
                 <body style={bodyStyle}>
-                    <div id="reactContainer" />
-                    <div id="reactHelloContainer" dangerouslySetInnerHTML={ {__html: this.props.content} } />
-                    <div id="buttonContainer" />
+                    <div id="app" />
                 </body>
             </html>
         );
